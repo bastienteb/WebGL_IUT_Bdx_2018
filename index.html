@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>[WebGL] Rendu TP Noté - TEBBANI Bastien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="canvas/style/bootstrap.min.css">
+    <link rel="stylesheet" href="canvas/style/style.css">
+  </head>
+  <body onload='main()'>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10">
+          <canvas id='dawin-webgl'>
+          </canvas>
+        </div>
+        <div class="col-md-2 input-col">
+          <h2 class="text-center">Setting</h2>
+
+          <h5>Translation</h5>
+          <div class="form-group">
+            <label class="col-sm-2" for="xTransla">Tx</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="xTransla" value="0" min="-10" max="10" step="0.1" id="xTranslaInp">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2" for="yTransla">Ty</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="yTransla" value="0" min="-10" max="10" step="0.1" id="yTranslaInp">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2" for="zTransla">Tz</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="zTransla" value="0" min="-10" max="10" step="0.1" id="zTranslaInp">
+            </div>
+          </div>
+
+          <h5>Rotation</h5>
+          <div class="form-group">
+            <label class="col-sm-2" for="xRotation">Rx</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="xRotation" value="0" min="-3.14" max="3.14" step="0.01" id="xRotInp">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2" for="yRotation">Ry</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="yRotation" value="0" min="-3.14" max="3.14" step="0.01" id="yRotInp">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2" for="zRotation">Rz</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="zRotation" value="0" min="-3.14" max="3.14" step="0.01" id="zRotInp">
+            </div>
+          </div>
+
+          <h5>Camera</h5>
+          <div class="form-group">
+            <label class="col-sm-2" for="zoom">Zoom</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="zoom" value="1" min="0.1" max="5" step="0.1" id="zoomInput">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2" for="yFov">Perspective</label>
+            <div class="col-sm-10">
+              <input type="range" class="form-control-range" name="yFov" value="75" min="30" max="120" step="1" id="yFovInput">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src='canvas/scripts/gl-matrix-min.js'></script>
+    <script src='canvas/scripts/main.js'></script>
+  </body>
+</html>
